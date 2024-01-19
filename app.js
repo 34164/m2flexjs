@@ -1,6 +1,8 @@
 let canvas = document.getElementById("canvas");
 let g = canvas.getContext("2d"); 
 
+
+
 const gamestate_start=0;
 const gamestate_ingame=1;
 const gamestate_gameover=2;
@@ -17,7 +19,7 @@ let playerAmoutButtons = [];
 function createRect(x,y,w,h)
 {
     let rectangle = {
-        x:x,
+        x:x, 
         y:y,
         x2:x+w,
         y2:y+h,
@@ -35,6 +37,7 @@ function clearCanvas()
 
 function draw()
 {
+    
     clearCanvas();
     for(let i =0 ; i<boardPositions.length;i++)
     {
@@ -54,7 +57,6 @@ function createBoardPositions()
     let x= 0;
     let y = canvas.height-boardPositionSize;
     let path = [1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 3, 3, 3, 3, 3, 3, 3, 3, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 3, 3, 3, 3, 3, 3, 3, 3, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1] ;
-
     for(let i =0 ; i<path.length;i++)
     {
 
@@ -79,5 +81,9 @@ function createBoardPositions()
    
 } 
 
+
+
 createBoardPositions();
 draw();
+
+
